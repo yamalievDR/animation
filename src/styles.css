@@ -3,6 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
 .full-page {
-  font-size: 30vh;
+  font-size: 10vh;
   text-align: center;
 }
