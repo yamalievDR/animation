@@ -1,0 +1,8 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 11.2px)); // TODO разобраться с 11.2
+  justify-items: center;
+  align-items: center;
+  grid-gap: 20px 15px;
+  padding: 15px 15px;
+}

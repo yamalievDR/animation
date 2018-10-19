@@ -8,12 +8,16 @@ import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { ROUTES } from './app.routing';
 import { ContactsComponent } from './contacts/contacts.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    DashboardComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
