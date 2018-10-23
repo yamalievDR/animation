@@ -1,4 +1,4 @@
-import {animation, style, group, animate, stagger, query} from '@angular/animations';
+import { animate, animation, group, query, stagger, style } from '@angular/animations';
 
 export const PAGE_IN_ANIMATION = animation([
   query('.full-page', [

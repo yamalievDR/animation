@@ -1,5 +1,5 @@
 import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 const NICE_EASING = 'cubic-bezier(0.35, 0, 0.25, 1)';
 const SHARED_ANIMATION_STYLES = [
@@ -24,9 +24,9 @@ const SHARED_ANIMATION_STYLES = [
         query(':enter', [
           style({ opacity: 0, transform: 'translateX(100%)' }),
         ]),
-        // query(':leave', [
-        //   animateChild(),
-        // ]),
+        query(':leave', [
+          animateChild(),
+        ]),
         group([
           query(':leave', [
             animate('1s ' + NICE_EASING, style({ transform: 'translateX(-100%)', opacity: 0}))
@@ -34,9 +34,9 @@ const SHARED_ANIMATION_STYLES = [
           query(':enter', [
             animate('0.5s 0.1s ' + NICE_EASING, style({ opacity: 1, transform: 'none' })),
           ]),
-          // query(':enter', [
-          //   animateChild()
-          // ], { delay: '500ms' })
+          query(':enter', [
+            animateChild()
+          ], { delay: '500ms' })
         ]),
       ]),
       transition(':decrement', [
@@ -44,9 +44,9 @@ const SHARED_ANIMATION_STYLES = [
         query(':enter', [
           style({ opacity: 0, transform: 'translateX(-100%)' }),
         ]),
-        // query(':leave', [
-        //   animateChild(),
-        // ]),
+        query(':leave', [
+          animateChild(),
+        ]),
         group([
           query(':leave', [
             animate('1s ' + NICE_EASING, style({ transform: 'translateX(100%)', opacity: 0 }))
@@ -54,9 +54,9 @@ const SHARED_ANIMATION_STYLES = [
           query(':enter', [
             animate('0.5s 0.1s ' + NICE_EASING, style({ opacity: 1, transform: 'none' })),
           ]),
-          // query(':enter', [
-          //   animateChild()
-          // ], { delay: '500ms' })
+          query(':enter', [
+            animateChild()
+          ], { delay: '500ms' })
         ])
       ]),
     ]),

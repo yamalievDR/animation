@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,18 +13,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
+  imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    MatButtonModule
+  ],
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsComponent,
     DashboardComponent,
     CardComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES),
-    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
