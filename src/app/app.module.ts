@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,7 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { ROUTES } from './app.routing';
 import { ContactsComponent } from './contacts/contacts.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
@@ -18,13 +21,16 @@ import { CardComponent } from './shared/card/card.component';
     BrowserAnimationsModule,
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsComponent,
-    DashboardComponent,
+    RepositoriesComponent,
     CardComponent
   ],
   providers: [],

@@ -4,17 +4,22 @@ $font-size: 15px;
   background-color: #1d1d1c;
   color: #e9ece5;
   border-radius: 5px;
-  box-shadow: 1px 4px 12px 0px transparentize(#252420, .2);
+  box-shadow: 1px 4px 12px 0 transparentize(#252420, .2);
   padding: 10px $font-size;
+  min-height: 150px;
   .card-header {
     font-size: $font-size;
     padding-top: $font-size;
   }
   .card-content {
     padding: $font-size 0;
+    max-height: 100px;
   }
   .card-footer {
     padding: $font-size 0;
     border-top: 1px solid #e9ece5;
+  }
+  a {
+    color: #e9ece5;
   }
 }
