@@ -1,5 +1,7 @@
 <form [formGroup]="inputForm">
-  <input matInput placeholder="Find repo" formControlName="search" />
+  <mat-form-field>
+    <input formControlName="search" matInput placeholder="Find repo"/>
+  </mat-form-field>
 </form>
 <div class="dashboard">
   <app-card *ngFor="let repo of repos$ | async" [data]="repo" class="card-item"></app-card>
