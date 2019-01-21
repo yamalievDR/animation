@@ -1,17 +1,32 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { shareAndCache } from 'http-operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { debounceTime, map, switchMap } from 'rxjs/operators';
 import { Repo } from '../models/repo';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-repositories',
   templateUrl: './repositories.component.html',
-  styleUrls: ['./repositories.component.scss']
+  styleUrls: ['./repositories.component.scss'],
+  animations: [
+    trigger('pageAnimations', [
+      transition(':enter', [
+        query('.card-item', [
+          style({opacity: 0, transform: 'translateY(-100px)'}),
+          stagger(30, [
+            animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', style({opacity: 1, transform: 'none'}))
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class RepositoriesComponent implements OnInit {
+  @HostBinding('@pageAnimations')
+  public animatePage = true;
 
   repos$: Observable<Repo[]>;
   inputForm = new FormGroup({
