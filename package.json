@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "git-publish": "npx ngh",
+    "git-publish": "ng build --prod --base-href=animation && ngh --dir dist",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
