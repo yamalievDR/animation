@@ -1,15 +1,9 @@
 import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NICE_EASING, SHARED_ANIMATION_STYLES } from './shared/animations/animaition';
 
-const NICE_EASING = 'cubic-bezier(0.35, 0, 0.25, 1)';
-const SHARED_ANIMATION_STYLES = [
-  style({position: 'relative', height: '!', overflow: 'hidden'}),
-  query(':enter, :leave', [
-    style({position: 'absolute', left: 0, top: 0, width: '100%'})
-  ]),
-  query(':enter', style({opacity: 0}))
-];
+
 
 
 @Component({
